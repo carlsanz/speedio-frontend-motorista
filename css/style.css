@@ -1,0 +1,93 @@
+body {
+    background-color: #FFE226;
+    font-family: 'Montserrat', sans-serif;
+    color: #0B3A56;
+    font-weight: bolder;
+}
+
+#contenedor-nombre-empresa {
+    display: flex;
+    flex-direction: column;
+
+}
+#nombre-empresa {
+    font-weight: bolder;
+    font-size: 1.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+#eslogan {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+#logo {
+    width: 10rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* inicio de sesion */
+#inicio-sesión {
+    display: block;
+}
+
+.icono-regreso {
+    font-size: 43px;
+    margin-top: 25px;
+    margin-left: 20px;
+    position: absolute;
+} 
+
+.informacion-inicio-sesion {
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.input-inicio-sesion {
+    width: 270px;
+    height: 35px;
+    border-radius: 5px;
+    border: #0B3A56 2px solid;
+}
+#boton-inicio-sesion {
+    margin-top: 35px;
+    font-size: 22px;
+    width: 270px;
+    height: 45px;
+    background-color: #C6382C;
+    color: #ffffff;
+    border: 2px #0B3A56 solid;
+    border-radius: 10px;
+}
+  
+#contenerdor-no-cuenta {
+    display: flex;
+    align-items: center;
+    width: 270px;
+}
+
+#no-cuenta {
+    margin-top: 1px;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.fa-brands {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+#footer {
+    position: absolute;
+    bottom:auto;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
