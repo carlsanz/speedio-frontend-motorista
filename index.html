@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body id="body">
 
-    <section id="inicio-sesión">
+    <!-- Inicio de Sesión -->
+    <section id="inicio-sesion">
         <div id="contenedor-nombre-empresa">
             <span><i class="icono-regreso fa-solid fa-angle-left"></i></span>
             <h1 id="nombre-empresa">speedio</h1>
@@ -29,7 +30,7 @@
             <input id="email" class="input-inicio-sesion" type="text">
             <h6 style="margin-top: 15px;" class="informacion-inicio-sesion">Contraseña</h6>
             <input id="contrasena" class="input-inicio-sesion" type="password">
-            <button id="boton-inicio-sesion" >Ingresar</button>
+            <button id="boton-inicio-sesion" onclick="validarFormulario()">Ingresar</button>
 
             <div id="contenerdor-no-cuenta">
                 <a id="no-cuenta">¿No tienes Cuenta?</a>
@@ -43,6 +44,49 @@
         </footer>
     </section>
 
+    <!-- Listado de Ordenes -->
+    <section id="listado-ordenes">
+        <div id="contenedor-nombre-empresa">
+            
+            <h1 id="nombre-empresa">Bienvenido</h1>
+            <h3 id="list-orden">Listado de Órdenes</h3>
+        </div>
+    <div id="ordenes">   
+        <div class="ordenes-a-tomar">
+            <P class="parrafo-orden">DISPONIBLES</P>
+            <span><i class="icono-orden fa-solid fa-list"></i></span>
+        </div>
+
+        <div class="ordenes-a-tomar">
+            <P class="parrafo-orden">TOMADAS</P>
+            <span><i style="margin-left: 35px;" class="icono-orden fa-solid fa-motorcycle"></i></span>
+        </div>
+
+        <div class="ordenes-a-tomar">
+            <P class="parrafo-orden">ENTREGADAS</P>
+            <span><i class="icono-orden fa-solid fa-list-check"></i></span>
+        </div>
+    </div>
+
+    <footer id="footer-usuario">
+        <i id="icono-inicio" class="iconos-footer-nuevo fa-solid fa-house"></i>
+        <i class="iconos-footer-nuevo fa-solid fa-circle-user"></i>
+    </footer>
+    </section>
+
+    <!-- ORDENES DISPONIBLES -->
+    <section id="ordenes-disponibles">
+        <header id="contenedor-ordenes-disponibles">
+            <img id="logo-ordenes" src="img/logo-speedio.png" alt="">
+            <h1 id="nombre-empresa">DISPONIBLES</h1>
+        </header>
+            
+
+
+
+    </section>
+
+    <script src="js/controlador.js"></script>
 </body>
 
 </html>

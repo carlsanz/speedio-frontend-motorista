@@ -23,3 +23,12 @@ function validarFormulario() {
     }
 
   }
+
+ function ingreso() {
+  document.getElementById('body').style.backgroundColor='#ffffff';
+  document.getElementById('inicio-sesion').style.display='none';
+  document.getElementById('listado-ordenes').style.display='block'
+  document.getElementById('icono-inicio').style.color="#ffffff"
+  
+  
+ }

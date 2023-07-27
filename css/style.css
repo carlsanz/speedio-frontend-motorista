@@ -1,5 +1,5 @@
 body {
-    background-color: #FFE226;
+    background-color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     color: #0B3A56;
     font-weight: bolder;
@@ -30,8 +30,8 @@ body {
     padding-bottom: 10px;
 }
 /* inicio de sesion */
-#inicio-sesión {
-    display: block;
+#inicio-sesion {
+    display:none;
 }
 
 .icono-regreso {
@@ -91,3 +91,80 @@ body {
     justify-content: space-around;
     align-items: flex-start;
 }
+/* ORDENES */
+#listado-ordenes {
+    display: none;
+}
+
+#list-orden {
+    margin-left: 30px;
+    color: #0B3A56;
+}
+
+#ordenes {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.ordenes-a-tomar {
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+    border: 1px solid #0B3A56;
+    margin: 5px 20px 20px 20px;
+    height: 100px;
+    background-color: #FFE226;
+}
+.parrafo-orden {
+    font-size: 28px;
+    color: #ffffff;
+    text-shadow: -2px -2px 0 #0B3A56, 2px -2px 0 #0B3A56, -2px 2px 0 #0B3A56, 2px 2px 0 #0B3A56;
+}
+
+.icono-orden {
+    font-size: 28px;
+    color: #C6382C;
+}
+
+#footer-usuario {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #FFE226;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.iconos-footer-nuevo {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* ORDENES DISPONIBLES */
+#ordenes-disponibles {
+    display: block;
+}
+#contenedor-ordenes-disponibles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFE226;
+    margin: 0!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; 
+    color: #ffffff;
+}
+#logo-ordenes {
+    width: 4rem;
+}
+
+
+
