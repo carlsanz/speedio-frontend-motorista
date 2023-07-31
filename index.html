@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lanrg="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,26 +43,30 @@
             <i class="fa-brands fa-twitter"></i>
         </footer>
     </section>
+    
+
 
     <!-- Listado de Ordenes -->
     <section id="listado-ordenes">
         <div id="contenedor-nombre-empresa">
-            
+            <span><i onclick="validarFormulario()" class="icono-regreso-listado fa-solid fa-angle-left"></i></span>
+            <img id="logo-ordenes" src="img/logo-speedio.png" alt="">
             <h1 id="nombre-empresa">Bienvenido</h1>
             <h3 id="list-orden">Listado de Órdenes</h3>
         </div>
     <div id="ordenes">   
-        <div class="ordenes-a-tomar">
+        <div class="ordenes-a-tomar" onclick="generarOrdenesDisponibles()">
+            
             <P class="parrafo-orden">DISPONIBLES</P>
             <span><i class="icono-orden fa-solid fa-list"></i></span>
         </div>
 
-        <div class="ordenes-a-tomar">
+        <div  class="ordenes-a-tomar" onclick="generarOrdenesTomadas()">
             <P class="parrafo-orden">TOMADAS</P>
             <span><i style="margin-left: 35px;" class="icono-orden fa-solid fa-motorcycle"></i></span>
         </div>
 
-        <div class="ordenes-a-tomar">
+        <div class="ordenes-a-tomar" onclick="generarOrdenesEntregadas()">
             <P class="parrafo-orden">ENTREGADAS</P>
             <span><i class="icono-orden fa-solid fa-list-check"></i></span>
         </div>
@@ -70,19 +74,156 @@
 
     <footer id="footer-usuario">
         <i id="icono-inicio" class="iconos-footer-nuevo fa-solid fa-house"></i>
-        <i class="iconos-footer-nuevo fa-solid fa-circle-user"></i>
+        <i class="iconos-footer-nuevo fa-solid fa-circle-user" onclick="generarPerfil()"></i>
     </footer>
+    </section>
+
+    <!-- Perfil del Motorista -->
+    <section id="perfil">
+        <header id="perfil-header">
+            <img id="logo-ordenes" src="img/logo-speedio.png" alt="">
+            <h1 id="nombre-empresa">Tú Perfil</h1>
+            <i id="usuario-foto" class="fa-solid fa-circle-user"></i>
+        </header>
+
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="contenedor-atributos">
+                <p class="atributos-motorista">Nombre</p>
+                <h1 class="info-atributos">Carlos</h1>
+            </div>
+            <div class="contenedor-atributos">
+                <p class="atributos-motorista">Usuario</p>
+                <h1 class="info-atributos">Carlsanz</h1>
+            </div>
+            <div class="contenedor-atributos">
+                <p class="atributos-motorista">Teléfono</p>
+                <h1 class="info-atributos">9999-0151</h1>
+            </div>
+        </div>
+
+        <footer id="footer-usuario">
+            <i id="icono-inicio" class="iconos-footer-nuevo fa-solid fa-house" onclick="ingreso()"></i>
+            <i id="icono-usuario-footer" class="iconos-footer-nuevo fa-solid fa-circle-user"></i>
+        </footer>
+    
     </section>
 
     <!-- ORDENES DISPONIBLES -->
     <section id="ordenes-disponibles">
         <header id="contenedor-ordenes-disponibles">
+            <span><i onclick="ingreso()" class="icono-regreso-disponible fa-solid fa-angle-left"></i></span>
             <img id="logo-ordenes" src="img/logo-speedio.png" alt="">
             <h1 id="nombre-empresa">DISPONIBLES</h1>
         </header>
-            
 
+        <div id="contenedor-pedidos">
+            <!-- Pedido individual -->
+            <div class="pedidos">
+                <div >
+                    <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                    <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                </div>
+            </div>
+            <!-- Pedido individual -->
+            <div class="pedidos">
+                <div >
+                    <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                    <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                </div>
+            </div>
+            <!-- Pedido individual -->
+            <div class="pedidos">
+                <div >
+                    <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                    <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                </div>
+            </div>
+            <!-- Pedido individual -->
+            <div class="pedidos">
+                <div >
+                    <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                    <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                </div>
+            </div>
+            <!-- Pedido individual -->
+            <div class="pedidos">
+                <div >
+                    <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                    <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                </div>
+            </div>
 
+        </div>
+    </section>
+
+    <!-- ORDENES TOMADAS -->
+    <section id="ordenes-tomadas">
+        <header id="contenedor-ordenes-disponibles">
+            <span><i onclick="ingreso()" class="icono-regreso-disponible fa-solid fa-angle-left"></i></span>
+            <img id="logo-ordenes" src="img/logo-speedio.png" alt="">
+            <h1 id="nombre-empresa">Tomadas</h1>
+        </header>
+
+        <div id="contenedor-pedidos-tomados">
+            <!-- Pedido Tomados -->
+            <div class="pedido-tomado">
+                <div>
+                    <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                    <h5 style="margin-top: 5px; margin-bottom: 28px;">ESTADO</h5>
+                </div>
+
+                <div style="display: flex;">
+                    <div class="estado-orden">En Origen</div>
+                    <div class="estado-orden">En Camino</div>
+                </div>
+
+                <div class="estado-orden">
+                    Entregado
+                </div>
+                <div class="estado-orden">
+                    Ver Factura
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ordenes Entregadas -->
+
+    <section id="ordenes-entregadas">
+        <header id="contenedor-ordenes-disponibles">
+            <span><i onclick="ingreso()" class="icono-regreso-disponible fa-solid fa-angle-left"></i></span>
+            <img id="logo-ordenes" src="img/logo-speedio.png" alt="">
+            <h1 id="nombre-empresa">ENTREGADAS</h1>
+        </header>
+
+        <div id="contenedor-pedidos">
+            <!-- Pedido individual -->
+            <div class="pedidos">
+                <div >
+                    <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                    <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                </div>
+                <span><i class="icono-check fa-solid fa-check-double"></i></span>
+            </div>
+        </div>
 
     </section>
 
