@@ -271,3 +271,28 @@ body {
     font-weight: 100;
     margin-left: 20px;
 }
+
+/* FACTURA */
+#factura {
+    display: none;
+    background-color: #ffffff;
+}
+
+#header-factura {
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedor-factura {
+    background-color: #FFE226;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.precios-factura {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+

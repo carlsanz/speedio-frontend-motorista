@@ -195,7 +195,7 @@
                 <div class="estado-orden">
                     Entregado
                 </div>
-                <div class="estado-orden">
+                <div onclick="generarFactura()" class="estado-orden">
                     Ver Factura
                 </div>
             </div>
@@ -222,6 +222,47 @@
                     <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
                 </div>
                 <span><i class="icono-check fa-solid fa-check-double"></i></span>
+            </div>
+        </div>
+
+    </section>
+<!-- factura -->
+    <section id="factura">
+        <header id="header-factura">
+            <span><i onclick="generarOrdenesTomadas()" class="icono-regreso-disponible fa-solid fa-angle-left"></i></span>
+            <h1 style="margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px; font-weight: bolder;">SPEEDIO</h1>
+            <img id="logo-ordenes" src="img/logo-speedio.png" alt="">
+            <h1 style="margin-left: auto; margin-right: auto;">Always On Time</h1>
+        </header>
+
+        <div id="contenedor-factura">
+            <div style="display: flex; flex-direction: column; align-items: center; ">
+                <h1 style="margin-bottom: 5px;">Pedido #000243</h1> 
+            </div>
+            <p style="margin-bottom: 3px; margin-left: 10px;">25-06-2023</p>
+            <p style="margin-top: 3px; margin-left: 10px;">Tienda Origen: Wendys Alameda</p>
+            <hr>
+
+            <div class="precios-factura">
+                <p>Combo Economico x2</p>
+                <p>L. 104.35</p>
+            </div>
+            <div class="precios-factura">
+                <p>ISV</p>
+                <p>15.65</p>
+            </div>
+            <div class="precios-factura">
+                <p>SubTotal</p>
+                <p>L. 120.00</p>
+            </div>
+            <div style="margin-bottom: 50px;" class="precios-factura">
+                <p>Envío</p>
+                <p>L. 50.00</p>
+            </div>
+            <hr>
+            <div class="precios-factura">
+                <p>TOTAL</p>
+                <p>L. 170.00</p>
             </div>
         </div>
 
