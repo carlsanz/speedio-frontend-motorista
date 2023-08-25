@@ -1,4 +1,10 @@
+  let usertxt = document.getElementById("email");
+  let passwordtxt = document.getElementById("contrasena");
+  let botonIngresar = document.getElementById("boton-inicio-sesion");
 
+
+
+const inicioSesion=()=> {
   document.getElementById('body').style.backgroundColor='#FFE226'; //Cambiar por FFE226
   document.getElementById('inicio-sesion').style.display='block';//cambiar por block
   document.getElementById('listado-ordenes').style.display='none'
@@ -8,31 +14,48 @@
   document.getElementById('perfil').style.display='none';
   document.getElementById('factura').style.display='none';
 
-function validarFormulario() {
-    const emailInput = document.getElementById('email');
-    const contrasenaInput = document.getElementById('contrasena');
 
-    const email = emailInput.value;
-    const contrasena = contrasenaInput.value;
+}
+inicioSesion();
 
-    // Expresión regular para validar el email
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (regexEmail.test(email)) {
+botonIngresar.addEventListener("click", () => {
+
+  loginMotorista(usertxt.value, passwordtxt.value);
+});
+
+// 
+const loginMotorista = async (user, password) => {
+
+  let respuesta = await fetch(`http://localhost:3000/motoristas/login`, {
+      method: 'POST',
+      headers: {
+          
+          "Content-Type": "application/json", //MIME Type
+      },
+      body: JSON.stringify(
+          {
+              "correo_electronico": `${document.getElementById("email").value}`,
+              "contrasena": `${document.getElementById("contrasena").value}`
+          }
+      )
       
-    } else {
-      alert('Email inválido');
-      return;
-    }
-
-    // Verificar que la contraseña tenga al menos 6 caracteres
-    if (contrasena.length < 6) {
-      alert('La contraseña debe tener al menos 6 caracteres');
-    } else {
-      ingreso()
-    }
-
+  });
+  
+  let usuario = await respuesta.json();
+  console.log(usuario.status)
+  if (usuario.status == true) {
+    ingreso()
+  }else{
+    validarFormulario()
   }
+  
+}
+
+
+// 
+
+ 
 
  function ingreso() {
   document.getElementById('body').style.backgroundColor='#ffffff';
@@ -111,4 +134,8 @@ function generarFactura() {
   document.getElementById('factura').style.display='block';
 
 
+}
+
+function validarFormulario() {
+  return alert('Email invalido o contraseña incorrecta');
 }
