@@ -244,6 +244,12 @@ body {
     color: #36DF63;
 }
 
+#contenedor-pedidos-entregados {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
 /* perfil */
 
 #usuario-foto {
