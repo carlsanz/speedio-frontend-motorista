@@ -140,7 +140,7 @@ const generarOrdenesTomadas = async()=> {
 
   for (let i = 0; i< ordenesTomadas.length; i++) {
     document.getElementById("contenedor-pedidos-tomados").innerHTML+=
-    `<div class="pedido-tomado">
+    `<div id="pedido-tomado" class="pedido-tomado">
     <div>
         <p style="margin-bottom: 0; margin-top: 28px;">Pedido #${ordenesTomadas[i].numero_orden}</p>
         <h5 style="margin-top: 5px; margin-bottom: 28px;">ESTADO</h5>
@@ -154,7 +154,7 @@ const generarOrdenesTomadas = async()=> {
     <div class="estado-orden">
         Entregado
     </div>
-    <div onclick="generarFactura()" class="estado-orden">
+    <div onclick="generarFactura(this)" class="estado-orden">
         Ver Factura
     </div>
 </div>`;
@@ -190,8 +190,8 @@ const generarOrdenesEntregadas = async()=> {
           <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
       </div>
       <div>
-        <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
-        <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+        <p style="margin-bottom: 0; margin-top: 28px;">Pedido #${ordenesEntregadas[i].estado}</p>
+        <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: ${ordenesEntregadas[i].destino}</h5>
      </div>
       <span><i class="icono-check fa-solid fa-check-double"></i></span>
     </div>`;
@@ -202,6 +202,8 @@ const generarOrdenesEntregadas = async()=> {
 }
 
 function generarPerfil() {
+
+
   document.getElementById('icono-usuario-footer').style.color='#ffffff';
 
   document.getElementById('body').style.backgroundColor='#ffffff';
@@ -212,9 +214,25 @@ function generarPerfil() {
   document.getElementById('ordenes-entregadas').style.display='none';
   document.getElementById('perfil').style.display='block';
   document.getElementById('factura').style.display='none';
+
+  document.getElementById("contenedor-motorista").innerHTML=
+  ` <div class="contenedor-atributos">
+  <p class="atributos-motorista">Nombre</p>
+  <h1 class="info-atributos">${nuevoUsuario.nombre}</h1>
+</div>
+<div class="contenedor-atributos">
+  <p class="atributos-motorista">Usuario</p>
+  <h1 class="info-atributos">${nuevoUsuario.nombre+" "+nuevoUsuario.apellido}</h1>
+</div>
+<div class="contenedor-atributos">
+  <p class="atributos-motorista">Teléfono</p>
+  <h1 class="info-atributos">${nuevoUsuario.telefono}</h1>
+</div>`;
+
+
 }
 
-function generarFactura() {
+function generarFactura(element) {
   document.getElementById('icono-usuario-footer').style.color='#ffffff';
 
   document.getElementById('body').style.backgroundColor='#ffffff';
@@ -225,6 +243,8 @@ function generarFactura() {
   document.getElementById('ordenes-entregadas').style.display='none';
   document.getElementById('perfil').style.display='none';
   document.getElementById('factura').style.display='block';
+
+ document.getElementById("pedido-tomado").querySelector('*');
 
 
 }
